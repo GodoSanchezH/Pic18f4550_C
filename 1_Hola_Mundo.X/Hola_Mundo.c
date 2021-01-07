@@ -44,7 +44,7 @@ void GPIO_Init(void){
     TRISA &= 0x00;
     TRISD &= 0x00;
 //Inicializamos los puertos en Low
-    LATA |= 0x00;
-    LATB |= 0x00;
-    LATD |= 0x00;
+   LATB &= 0x00;
+   LATD &= 0x00;
+   LATA &= 0x00;
 }
