@@ -38,13 +38,13 @@ int main(int argc, char** argv) {
 //Desarollamos  La funcion
 void GPIO_Init(void){
 //Definimos los puertos Analogicos como Digitales 
-    ADCON0 &= 0x00;
+    ADCON1bits.PCFG |= 0xFF;
 //Definimos Los puertos como Salidas
     TRISB &= 0x00;
     TRISA &= 0x00;
     TRISD &= 0x00;
 //Inicializamos los puertos en Low
-   LATB &= 0x00;
-   LATD &= 0x00;
-   LATA &= 0x00;
+    LATA |= 0x00;
+    LATB |= 0x00;
+    LATD |= 0x00;
 }
